@@ -12,11 +12,24 @@ public class ContaBancaria {
     }
 
     public double deposito(double valor) {
+        System.out.println("Depositou: " + valor);
+        System.out.println("==================================");
         return saldo+=valor;
     }
 
     public double saque(double valor) {
-        return saldo-=valor;
+        System.out.println("Sacar: " + valor);
+        System.out.println("==================================");
+        if (saldo >= valor) {
+            System.out.println("Sacou dinheiro: " + valor);
+            System.out.println("==================================");
+            saldo-=valor;
+            return saldo;
+        } else {
+            System.out.println("Saldo insuficiente ");
+            System.out.println("==================================");
+            return -1;
+        }
     }
 
     public void imprimirInformacoes() {
