@@ -8,7 +8,6 @@ public class ContaBancaria {
         this.conta = conta;
         this.nome = nome;
         this.saldo = saldo;
-        this.limiteSaque = limiteSaque;
     }
 
     public double deposito(double valor) {
